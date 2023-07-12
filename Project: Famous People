@@ -1,0 +1,23 @@
+ CREATE TABLE Actors (id integer primary key autoincrement,fullname text,age integer,nationality text);
+
+Insert into actors (fullname,age,nationality) values ('Tom Holland',27,'ENGLAND');
+Insert into actors (fullname,age,nationality) values ('ZENDAYA',26,'US');
+Insert into actors (fullname,age,nationality) values ('JAINA LEE ORTIZ',36,'US');
+INSERT into actors (fullname,age,nationality) values ('ANNE HATHAWAY',40,'US');
+INSERT into actors (fullname,age,nationality) values ('WILL SMITH',54,'US');
+
+Create table Movies (id integer primary key autoincrement, actors_id integer,movie text, year text);
+
+Insert Into movies (actors_id,movie,year) values (1,'Spiderman Homecoming','2017');
+Insert into movies (actors_id, movie,year) values
+(2,'The greatest showman','2017');
+insert into movies ( actors_id,movie,year) values
+(3,'The righteous thieves', '2023');
+Insert into movies (actors_id, movie,year) values (4,'princess diaries','2001');
+Insert into movies(actors_id,movie,year) values 
+(5,'Hitch','2005');
+
+Select actors.fullname,movies.movie,movies.year
+from actors
+join movies
+on actors.id =movies.actors_id;
